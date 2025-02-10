@@ -39,7 +39,9 @@ class LangSAM:
             }, ...]
         """
 
-        gdino_results = self.gdino.predict(images_pil, texts_prompt, box_threshold, text_threshold)
+        gdino_results = self.gdino.predict(
+            images_pil, texts_prompt, box_threshold, text_threshold
+        )
         all_results = []
         sam_images = []
         sam_boxes = []
